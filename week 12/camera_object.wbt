@@ -1,0 +1,142 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/samples/tutorials/protos/FourWheelsRobot.proto"
+
+WorldInfo {
+  info [
+    "Example use of a color Camera device with motion blur."
+  ]
+  title "Camera Motion Blur"
+  basicTimeStep 8
+}
+Viewpoint {
+  orientation 0.19882890502343337 0.5761996650252135 -0.7927553295639295 1.1784203469785266
+  position -0.6359152320709346 1.1903392717317147 1.311682171514501
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+FourWheelsRobot {
+  hidden position_0_0 305.4298163338514
+  hidden position_0_1 -52.96785617286644
+  hidden position_0_2 305.4298252739335
+  hidden position_0_3 -52.967856890363954
+  hidden linearVelocity_0 0.03514048591154102 -0.019108800325828252 2.2330704070618186e-13
+  hidden angularVelocity_0 -4.591306395802663e-08 2.496904778802294e-08 -4.759112716600863e-08
+  hidden rotation_1 -0.24822483254458438 0.6849748118105246 -0.6849773278681199 3.6282053772765526
+  hidden linearVelocity_1 0.0351404873506655 -0.019108803950530613 -3.074192985351138e-09
+  hidden angularVelocity_1 0.47772000825594474 0.8785121480058088 3.5003956838152825e-08
+  hidden rotation_2 0.15590323704829007 -0.6984592317211581 0.6984617973098844 2.8322773213149413
+  hidden linearVelocity_2 0.035140482086818886 -0.019108801088162902 3.0744415613493528e-09
+  hidden angularVelocity_2 0.4777200080321292 0.8785121475836328 3.499823802561961e-08
+  hidden rotation_3 -0.24822808308030886 0.6849742228353256 -0.6849767388907576 3.6282115010049525
+  hidden linearVelocity_3 0.03514048973626302 -0.019108799563492297 -3.0739951401271126e-09
+  hidden angularVelocity_3 0.47772000826359806 0.878512148001647 3.498731604974979e-08
+  hidden rotation_4 0.15590298038567296 -0.698459260365888 0.6984618259547196 2.832277822457714
+  hidden linearVelocity_4 0.035140484472416446 -0.019108796701125263 3.0746395882440768e-09
+  hidden angularVelocity_4 0.47772000803978165 0.8785121475794713 3.498159840099042e-08
+  translation 0.22116480197824598 -0.22929023273272195 0.039930244824503566
+  rotation 1.619092246650373e-07 -4.117762620400542e-08 -0.9999999999999861 0.4980576402036024
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0.6
+  location 0 0 0.6
+}
+DEF GREEN_BOX Solid {
+  translation 0.25 0.05 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 0.2189099510000001
+        metalness 0
+      }
+      geometry DEF BOX0 Box {
+        size 0.1 0.23 0.1
+      }
+    }
+  ]
+  name "green box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      metalness 0
+    }
+    geometry USE BOX0
+  }
+}
+DEF BLUE_BOX Solid {
+  translation -0.27 -0.2 0.05
+  rotation 0 0 1 0.31
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.519341125
+        metalness 0
+      }
+      geometry DEF BOX1 Box {
+        size 0.1 0.2 0.1
+      }
+    }
+  ]
+  name "blue box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      metalness 0
+    }
+    geometry USE BOX1
+  }
+}
+DEF WHITE_BOX Solid {
+  translation -0.15 0.2 0.05
+  rotation 0 0 1 0.4
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.74902 0.74902 0.74902
+        roughness 0.10196099999999997
+        metalness 0
+      }
+      geometry DEF BOX2 Box {
+        size 0.3 0.05 0.1
+      }
+    }
+  ]
+  name "gray box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      metalness 0
+    }
+    geometry USE BOX2
+  }
+}
+DEF RED_BOX Solid {
+  translation 0.1 -0.42 0.05
+  rotation 0 0 1 1.8326
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.16827074099999995
+        metalness 0
+      }
+      geometry DEF BOX3 Box {
+        size 0.08 0.2 0.1
+      }
+    }
+  ]
+  name "red box"
+  boundingObject Shape {
+    appearance PBRAppearance {
+      metalness 0
+    }
+    geometry USE BOX3
+  }
+}
